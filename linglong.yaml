@@ -1,0 +1,25 @@
+package:
+  id: qtsensors
+  name: qtsensors
+  kind: lib
+  version: 5.11.3
+  description: |
+    qtsensors
+
+base:
+  id: org.deepin.base
+  version: 20.5.0
+
+depends:
+- id: qtbase
+  version: 5.11.3.15
+
+source:
+  kind: git
+  url: https://github.com/deepin-community/qtsensors-opensource-src.git
+  version: uos/5.11.3
+  commit: 5e168ad6a671cae258adb5a3905881d49a52f3de
+  patch:
+  - disable_local_tests.diff
+build:
+  kind: qmake
